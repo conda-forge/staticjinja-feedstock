@@ -14,14 +14,14 @@ source:
 build:
   noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - staticjinja = staticjinja.cli:main
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - docopt
@@ -38,8 +38,7 @@ about:
   home: http://github.com/Ceasar/staticjinja
   license: MIT
   license_family: MIT
-  # https://github.com/Ceasar/staticjinja/pull/80
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file: LICENSE
   summary: 'jinja based static site generator'
   description: |
     staticjinja is a library for easily deploying static sites using the Jinja2
