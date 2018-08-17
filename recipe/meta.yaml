@@ -1,6 +1,6 @@
 {% set name = "staticjinja" %}
-{% set version = "0.3.4" %}
-{% set sha256 = "62803c2369bf148213744c5797c4a2a5820061fc0bf6d4bbaba79832bc3fbbd7" %}
+{% set version = "0.3.5" %}
+{% set sha256 = "fbd61cca1dad44b6891d1a1d72b11ae100e21b3909802e3ff1861ab55bf16603" %}
 
 package:
   name: {{ name|lower }}
