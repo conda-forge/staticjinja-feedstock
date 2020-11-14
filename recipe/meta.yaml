@@ -1,6 +1,6 @@
 {% set name = "staticjinja" %}
-{% set version = "0.3.5" %}
-{% set sha256 = "fbd61cca1dad44b6891d1a1d72b11ae100e21b3909802e3ff1861ab55bf16603" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "597837899008409359680ee9cd04779639b9c0eb3380b6545025d26a702ba36c" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - staticjinja = staticjinja.cli:main
 
@@ -39,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'jinja based static site generator'
+  summary: jinja based static site generator
   description: |
     staticjinja is a library for easily deploying static sites using the Jinja2
     template engine.
