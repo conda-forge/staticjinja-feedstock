@@ -5,9 +5,11 @@ Home: http://github.com/Ceasar/staticjinja
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/staticjinja-feedstock/blob/master/LICENSE.txt)
 
 Summary: jinja based static site generator
+
+Development: http://github.com/Ceasar/staticjinja
 
 staticjinja is a library for easily deploying static sites using the Jinja2
 template engine.
